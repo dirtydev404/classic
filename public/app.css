@@ -1,6 +1,5 @@
 body {
     margin: 0px;
-    background: gray;
 }
 
 .navbar {
@@ -14,9 +13,7 @@ body {
 .navbar .toggle,
 .navbar .brand {
     display: inline-block;
-}
-
-.navbar .link {
+}.navbar .link {
     display: block;
     text-align: center;
     padding: 1em;
@@ -36,7 +33,6 @@ body {
     text-align: center;
     padding: 1em;
     color: white;
-    text-transform: lowercase;
 }
 
 .navbar a {
@@ -52,14 +48,41 @@ body {
     .navbar {
         display: flex;
     }
-    
+
+    .navbar div {
+        display: flex;
+    }
+
     .navbar .left,
     .navbar .right {
         display: flex;
         flex: 1;
     }
-    
+
     .navbar .link {
         width: auto;
+    }
+
+    .navbar .right {
+        justify-content: flex-end;
+    }
+
+    .navbar .toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 48em) {
+    .navbar.active .toggle {
+        background: #223047;
+        color: white;
+    }
+
+    .navbar .brand {
+        text-align: left;
+    }
+
+    .navbar.active div {
+        display: block;
     }
 }
